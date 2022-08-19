@@ -12,6 +12,8 @@ public class TheRiddler {
 int score = 0;
 		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
 String riddle = JOptionPane.showInputDialog("What has to be broken before you use it?");
+String riddle2 = JOptionPane.showInputDialog(" During which month do people sleep the least?");
+
 // 2.  Ask the user a question 
 if(riddle.equals("An egg.")) {
 	JOptionPane.showMessageDialog(null,"Correct");
@@ -19,9 +21,14 @@ if(riddle.equals("An egg.")) {
 }else {
 	JOptionPane.showMessageDialog(null,"Incorrect, the answer was An egg.");
 }
-JOptionPane.showMessageDialog(null,""+ score);
-		// 4. If they got the answer right, pop up "correct!" and increase the score by one
 
+if(riddle2.equals("February.")) {
+	JOptionPane.showMessageDialog(null,"Correct");
+	score = score + 1;
+}else {
+	JOptionPane.showMessageDialog(null,"Incorrect, the answer was February (there are fewer nights in February).");
+}
+JOptionPane.showMessageDialog(null,""+ score);
 		// 5. Otherwise, say "wrong" and tell them the answer
 
 		// 6. Add some more riddles
